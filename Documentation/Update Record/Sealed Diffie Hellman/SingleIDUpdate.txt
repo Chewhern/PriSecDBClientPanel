@@ -1,5 +1,4 @@
-
-Inserting single PK or FK db record are one of the common db CRUD
+Updating Primary Key Table record is one of the common CRUD
 operations.
 
 This document will assume you have already know how to read text from
@@ -103,4 +102,4 @@ Steps:
 13. The response you received will be "String_Value", if the String_Value has anything wrong it should have contain a message with "Error" characters, else it should
     have a success message.
 
-It's better based on this document, you go to try and use the panel. The panel should give you a better Sample JSON Data/String that I put as an example in step 12.
+It's better based on this document, you go to try and use the panel. The panel should give you a better Sample JSON Data/String that I put as an example in step 11.
