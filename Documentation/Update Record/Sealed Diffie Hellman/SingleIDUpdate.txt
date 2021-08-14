@@ -22,7 +22,8 @@ Steps:
 5. You will need to make sure the SQL Query String is a query string that has been set for preventing SQL Injection and web api server approved.
     Explanation:
       ====SQL Injection prevention query String explanation and example====
-      In normal circumstances, we will do something like INSERT INTO `User`(`Email`,`Phone_Number`,`Password`) VALUES(@Email,@Phone_Number,@Password)
+      In normal circumstances, we will do something like UPDATE `User` SET `Email`=@Email,`Phone_Number`=@Phone_Number,`Password`=@Password WHERE
+      `ID`=@Update_ID
       This kind of SQL query is a kind of SQL prevention query string.
       =====================================================================
 
