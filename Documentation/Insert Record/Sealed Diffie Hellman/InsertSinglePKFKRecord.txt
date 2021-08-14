@@ -1,11 +1,10 @@
 Inserting single PK or FK db record are one of the common db CRUD
 operations.
 
-This document will assume you have already know how to read bytes from file,
-how to read text from file, how to read text from directory/folder,
-how to use "POST" in WebAPI,convert data into JSON string,
-convert data into Base64 encoded string and 
-have basic understanding in public key cryptography.
+This document will assume you have already know how to read text from
+directory/folder, how to use "POST" in WebAPI,
+convert data into JSON string,
+convert data into Base64 encoded string.
 
 API url: 
 1. https://mrchewitsoftware.com.my:5002/api/NormalSealedDHDBInsert/ ("POST")
@@ -79,6 +78,8 @@ Steps:
    After you split the custom parameter names into String Array elements without the "@" symbol correctly, you will then require to convert each
    of the String Array element into Base64 encoded String. The Base64 encoded String element within the String Array will then be required to
    transfer all of it into a String Array that accepts only Base64 encoded String.
+   
+   You don't need to include reserve parameter names like "ID" or "FK_ID" into the array.
 
 7. Custom parameter value will then be required to first store in String Array that has been processed in a similar manner to step 6. The String Array
    will then be required to convert each of the element into Base64 encoded String like step 6. The converted String Array elements will then be
