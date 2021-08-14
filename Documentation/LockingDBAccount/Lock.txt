@@ -1,1 +1,56 @@
+DB Account Locking is a feature that will lock your db account so that login
+at the server is not possible.
 
+This document will assume you have already know how to read bytes from file,
+how to read text from file, how to read text from directory/folder,
+how to use "POST" and "GET" in WebAPI and 
+have basic understanding in public key cryptography.
+
+API url: 
+1. https://mrchewitsoftware.com.my:5002/api/Login/ ("GET")
+2. https://mrchewitsoftware.com.my:5002/api/LockDBAccount/ ("POST")
+
+Prerequisites:
+1. You must either purchase a db/renew a db
+2. Your "Application_Data/SignatureStorage" folder must exist
+3. You must establish a sealed session with the server(can done through PriSecDBClientPanel)
+4. Your "Application_Data/SealedCredentials" folder must exist
+5. Your "Application_Data/DBCredentials" folder must exist
+
+Steps:
+1. You must call the 1st API url through GET
+2. You will receive JSON Data/String, what matters to you is the "ServerECDSAPKBase64String" and "SignedRandomChallengeBase64String",
+you will need to properly deal with these 2 data.
+  Explanation:
+    A. "ServerECDSAPKBase64String" is server's ephemeral ED25519(State-Of-The-Art elliptic curve public key digital signature algorithm) public key,
+       it's encoded purely in base64 encoding.
+    B. "SignedRandomChallengeBase64String" is server's self generated random challenge that has been signed with ED25519 keypair. The keypair's
+       private key was immediately destroyed after signing process. The signed random challenge is then encoded with base64 encoding.
+3. You will need to verify the "SignedRandomChallengeBase64String" with the "ServerECDSAPKBase64String" to get the verified random challenge or
+   random challenge that hasn't been signed yet(before sending to you at server side).
+4. Assuming that you can't verify "SignedRandomChallengeBase64String" or you have exceeded 7 minutes(maximum allowed duration), kindly repeat
+   step 1 to 3 until you are able to verify the challenge.
+5. You will need to go to your "Application_Data/SignatureStorage" folder to look for a file named "LoginED25519SK.txt".
+6. You will need to read all bytes in that file and use it as ur ED25519 secret key.
+7. You will need to use the ED25519 secret key and sign the now verified or unsigned version of random challenge.
+8. You will need to convert the signed random challenge(signed with your own ED25519 SK locally) into Base64 Encoded String.
+9. You will need to read the name without path from "Application_Data/SealedCredentials/" folder's subfolder.
+10. You will need to access the file located inside "Application_Data/SealedCredentials/" folder's subfolder named "SealedDBUserNameB64.txt"
+11. You will need to read all the base64 encoded string reside within that file.
+12. You will need to access a file named "PaymentID.txt" and read all the ASCII text located within "Application_Data/DBCredentials/" folder.
+13. Now you need to put 4 values into 4 different variables by following the order below.
+    Explanation:
+      A. SealedSessionID = The subfolder name that retrieved on step 9.
+      B. SealedDBUserName = The sealed db user name that retrieved from step 10 to 11.
+      C. UniquePaymentID = The payment ID that retrieved from step 12.
+      D. SignedRandomChallenge = The base64 encoded string that retrieved/generated from step 3 and step 5 to 8.
+14. You will need to convert them into JSON Data/String and the final result should look similar to the example below.
+    {
+      "SealedSessionID":"{ASCII String}",
+      "SealedDBUserName":"{Base64 Encoded String}",
+      "UniquePaymentID":"{ASCII String}",
+      "SignedRandomChallenge":"{Base64 Encoded String}"
+    }
+15. You will need to post the converted JSON Data/String at 2nd API URL.
+16. The response you received will be "String_Value", if the String_Value has anything wrong it should have contain a message with "Error" characters, else it should
+    have a success message.
