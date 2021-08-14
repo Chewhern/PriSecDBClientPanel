@@ -121,7 +121,7 @@ Steps:
       "Base64ParameterValue":["{Base64 Encoded String}","{Base64 Encoded String}"],
       "ForeignKeyID":"{ASCII String}",
       "IsPrimaryKeyTable":"{Boolean}",
-      "IsXSalsa20Poly1305":"{Boolean}
+      "IsXSalsa20Poly1305":"{Boolean}"
     }
 13. You will need to post the converted JSON Data/String at 1st API URL.
 14. The response you received will be "String_Value", if the String_Value has anything wrong it should have contain a message with "Error" characters, else it should
