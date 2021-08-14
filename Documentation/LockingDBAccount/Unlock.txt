@@ -1,6 +1,5 @@
-
-DB Account Locking is a feature that will lock your db account so that login
-at the server is not possible.
+DB Account Locking is a feature that will unlock your db account so that login
+at the server is possible.
 
 This document will assume you have already know how to read bytes from file,
 how to read text from file, how to read text from directory/folder,
