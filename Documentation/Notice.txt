@@ -1,3 +1,60 @@
 I will only cover the one that's needed by developers or programmers,
 if the stuffs can be done through the clientpanel, i don't think
 there's a need for developers to understand all features/API.
+
+==Risks==
+Please do take a good care of your own sealed credentials.
+The sealed credentials could be leaked on server side(10-30%) or 
+client side(70-90%), the sealed credentials are a necessity
+for CRUD to function in the DB API. 
+
+If they do get leaked in either side, it's more dangerous
+in client side. 
+
+If the sealed credentials leaked in client side, there're
+2 concerns that can arise:
+
+1. (Not Data Confidential risks concern) The sealed credentials
+are more or less like an API key that developer used to let
+the server momentarily know who the user really are and perform
+CRUD operations. Due to it's sealed credentials, leaking it in
+client side won't expose the client's actual db credentials.
+Sealed refers to only server able to decrypt the credentials.
+
+Counter:
+I. To counter such issue, the sealed credentials can be
+deleted by client through the panel. It's also advised that
+developer change their db account password(Strong one please).
+
+2. (Not Data Confidential risks concern) If let's say, the
+sealed credentials leaked on both client and server side,
+the malicious people can gain access to your database
+credentials. The malicious people can then perform
+CRUD operations based on your leaked and exposed credentials.
+It could be ransom, it could be other kinds of attacks, the
+server wouldn't know. However, in such case, because the
+server encrypts the data in one way, helding your database
+as ransom does not really worth their time, as it seems
+to them, there's no purpose in holding a not unlockable
+safe, the key only holds by you.
+
+Counter:
+1. To counter such issue, make sure that you do backups,
+make sure you lock your database account. After you have
+done these, make sure to ask for support from the service
+provider through merchant. Due to the anonymity characteristic
+that the database has, you will need to make sure that your
+LoginED25519SK.txt file does not disappear.
+
+Else there's no way to let the service provider to assume
+that it was really you the owner.
+
+If the sealed credentials leaked on server side, clients
+simply need to delete the existing sealed credentials and
+make a new sealed credentials. If you don't follow this
+advice, it means that the malicious people can use
+the leaked credentials DH SK to decrypt the sealed
+credentials.
+
+========
+
