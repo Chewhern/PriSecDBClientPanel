@@ -108,7 +108,7 @@ Steps:
       "Base64ParameterValue":["{Base64 Encoded String}","{Base64 Encoded String}"],
       "IDValue":["{ASCII String}","{ASCII String}"],
       "NewIDValue":null,
-      "IsXSalsa20Poly1305":"{Boolean}
+      "IsXSalsa20Poly1305":"{Boolean}"
     }
 12. You will need to post the converted JSON Data/String at 1st API URL.
 13. The response you received will be "String_Value", if the String_Value has anything wrong it should have contain a message with "Error" characters, else it should
