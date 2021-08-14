@@ -4,7 +4,8 @@ at the server is not possible.
 
 This document will assume you have already know how to read bytes from file,
 how to read text from file, how to read text from directory/folder,
-how to use "POST" and "GET" in WebAPI and 
+how to use "POST" and "GET" in WebAPI,convert data into JSON string,
+convert data into Base64 encoded string  and 
 have basic understanding in public key cryptography.
 
 API url: 
