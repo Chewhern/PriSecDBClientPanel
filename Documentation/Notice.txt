@@ -103,4 +103,14 @@ it and consider without compromising the
 concept of "Post-Compromise Security".
 ======================
 
+Current PriSecDBAPI or ClientPanel does not have
+cryptographic keys authenticity. Hence the server
+is holding keys that has no cryptographic keys
+authenticity.(Hard to explain)
+
+In future this might or might not be solve. Under
+all circumstances, if the keys authenticity problem
+can only be solve through collecting user's private
+data, such options will not be consider by me.
+
 =======================
