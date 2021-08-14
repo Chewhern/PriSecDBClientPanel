@@ -1,0 +1,2 @@
+Same documentation as this link
+https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/Insert%20Record/Sealed%20Diffie%20Hellman/InsertSinglePKFKRecord.txt
