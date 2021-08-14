@@ -36,7 +36,7 @@ server wouldn't know. However, in such case, because the
 server encrypts the data in one way, helding your database
 as ransom does not really worth their time, as it seems
 to them, there's no purpose in holding a not unlockable
-safe, the key only holds by you.
+safe for ransom.
 
 Counter:
 1. To counter such issue, make sure that you do backups,
