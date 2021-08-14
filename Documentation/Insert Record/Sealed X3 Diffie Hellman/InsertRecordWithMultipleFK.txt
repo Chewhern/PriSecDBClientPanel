@@ -2,4 +2,4 @@ Same documentation with this link:
 https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/Insert%20Record/Sealed%20Diffie%20Hellman/InsertRecordWithMultipleFK.txt
 
 The API URL is not the same:
-1. https://mrchewitsoftware.com.my:5002/api/SpecialSealedX3DHDBInsert/
+1. https://mrchewitsoftware.com.my:5002/api/SpecialSealedX3DHDBInsert/ ("POST")
