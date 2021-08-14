@@ -1,0 +1,3 @@
+I will only cover the one that's needed by developers or programmers,
+if the stuffs can be done through the clientpanel, i don't think
+there's a need for developers to understand all features/API.
