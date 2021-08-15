@@ -97,6 +97,9 @@ Steps:
 
 It's better based on this document, you go to try and use the panel. The panel should give you a better Sample JSON Data/String that I put as an example in step 9.
 
-In the panel, it's advised to not select * as it will also select the PK/FK in the table that u created. The reason behind it is the panel will automatically
+In the panel, it's advised to not "select *" as it will also select the PK/FK in the table that u created. The reason behind it is the panel will automatically
 help you decrypt the fetched JSON Data/String. However, because the PK/FK is ASCII string rather than Base64 Encoded String, it does not get encrypted hence
 decryption on the ASCII string will result in program termination.
+
+It's up to the developer to figure out each of the fetched parametervalues belongs to which column within a table. This may not be a concern if you put a proper
+SQL Select query String.
