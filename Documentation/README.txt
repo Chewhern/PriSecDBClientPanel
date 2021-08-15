@@ -8,4 +8,5 @@ uncertain what will be the exact use cases.
 
 Not to mention, all decryption is done on client device/machine(Post-Compromise
 Security Model) rather
-than done on server(Pre-Compromise Security Model).
+than done on server(Pre-Compromise Security Model) and developer will experience
+low ease of use.
