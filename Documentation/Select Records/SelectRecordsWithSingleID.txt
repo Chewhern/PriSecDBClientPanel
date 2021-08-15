@@ -37,9 +37,7 @@ Steps:
       UPDATE query.
       =====================================================================
 
-      ==Foreign Key Table==
-      If you want to insert values into Foreign Key Table with only a single foreign key value, you will need to add a column field named "FK_ID"
-      The "FK_ID" is a varchar storage format column with the space of 500.
+      ==SQL Select With Single ID==
       Developer can only use the system generated primary key value as foreign key value.
       Developer need to supply the "ID" with valid system generated primary key value but make sure your query string looks similar 
       to the example below.
