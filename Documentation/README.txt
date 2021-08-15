@@ -5,3 +5,6 @@ there to guide you on how to properly use the web API.
 
 Due to that this is a security first confidential database hosting, it's
 uncertain what will be the exact use cases.
+
+Not to mention, all decryption is done on client device/machine rather
+than done on server.
