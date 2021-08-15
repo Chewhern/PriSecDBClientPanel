@@ -1,1 +1,9 @@
+Same documentation with some slight changes as the link below:
+https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/Select%20Records/SelectRecordsWithMultipleID.txt
 
+The API URL is not the same:
+https://mrchewitsoftware.com.my:5002/api/SpecialDeleteDBRecord/ ("POST")
+
+Difference:
+Steps 11: The response you will receive is only "{String_Value}. The {String_Value} will be responsible for telling developer
+whether the deletion of records is success or failed.
