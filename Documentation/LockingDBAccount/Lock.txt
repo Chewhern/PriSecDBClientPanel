@@ -27,6 +27,13 @@ you will need to properly deal with these 2 data.
        it's encoded purely in base64 encoding.
     B. "SignedRandomChallengeBase64String" is server's self generated random challenge that has been signed with ED25519 keypair. The keypair's
        private key was immediately destroyed after signing process. The signed random challenge is then encoded with base64 encoding.
+
+  Sample JSON Data/String:
+    {
+      "RequestStatus":"{ASCII String}",
+      "SignedRandomChallengeBase64String":"{Base64 encoded String}",
+      "ServerECDSAPKBase64String":"{Base64 encoded String}"
+    }
 3. You will need to verify the "SignedRandomChallengeBase64String" with the "ServerECDSAPKBase64String" to get the verified random challenge or
    random challenge that hasn't been signed yet(before sending to you at server side).
 4. Assuming that you can't verify "SignedRandomChallengeBase64String" or you have exceeded 7 minutes(maximum allowed duration), kindly repeat
