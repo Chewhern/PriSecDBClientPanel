@@ -7,7 +7,7 @@ convert data into JSON string,
 convert data into Base64 encoded string.
 
 API url: 
-1. https://mrchewitsoftware.com.my:5002/api/SpeicalSealedDHDBInsert/ ("POST")
+1. https://mrchewitsoftware.com.my:5002/api/SpecialSealedDHDBInsert/ ("POST")
 
 Prerequisites:
 1. You must either purchase a db/renew a db
