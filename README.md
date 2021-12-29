@@ -42,7 +42,7 @@ or any other similar countries, just use it privately. In the worst case, expect
 VPN will also block access to my stuffs(apply to China or any similar country netizens).
 ```
 
-====Login Mechanism====
+## Login Mechanism
 
 Passwords/Passphrases are consider as a user's secret. In general, if people choose to use passwords as a login mechanism, it's destined to be flawed as both user and developer might not know what they are doing. Passphrases on the other hand might not have such problems, however, it's not that doable to differentiate whether the given data is password or passphrases.
 
@@ -50,21 +50,15 @@ SSH key login/ Digital Signature with challenge and respond login in the other h
 
 MySQL(Current database) or any SQL structured database requires the use of passwords to login into the created db account. Anything that involves with CRUD in databases will still require passwords to login. However, to lock or unlock your database account, SSH key login/Digital Signature with challenge and respond login was used.
 
-===================
-
-===Problem of RSA=====
+## Problem of RSA
 
 RSA in general is consider a good confidential public key encryption algorithm(asymmetric encryption). Although it guarantees only the recipient can decrypt and read the messages, the decryption speed will become slower as the key size of RSA increases. 
 
-==================
-
-===Problem of Diffie Hellman===
+## Problem of Diffie Hellman
 
 Diffie hellman at its core was designed to let 2 parties communicate with each other privately and securely using the same generated symmetric encryption key.
 
-======================
-
-===How to achieve RSA encryption with Diffie Hellman===
+## How to achieve RSA encryption with Diffie Hellman
 
 1. User will be generating new DH keypair randomly and submit only public ones to server after payment made/renew payment(Default) Or
 User will be keeping their old DH keypair that generated previously and send the old public key to server during service renewal
@@ -84,23 +78,17 @@ User will be keeping their old DH keypair that generated previously and send the
 Note: Such approach was called sealed box in libsodium. When you are using the db client panel, you should see the word "sealed" keep on appearing, sealed either refers to
 only user can decrypt the data or only server can decrypt the data.
 
-Types of sealed diffie hellman:
+### Types of sealed diffie hellman:
 
-1. Single Diffie Hellman:
-
-a. SealedPublicKeyBox (XSalsa20Poly1305) {Default}
-
+1. Single Diffie Hellman:\
+a. SealedPublicKeyBox (XSalsa20Poly1305) {Default}\
 b. XChaCha20Poly1305 (SecretBox {libsodium}){Requires programmer/developer to have language interoperability skills as you might not be using it in C#}
 
-2. X3 Diffie Hellman:
-
-a. XSalsa20Poly1305 (SecretBox {libsodium} - comes along with most libsodium language binding)
-
+2. X3 Diffie Hellman:\
+a. XSalsa20Poly1305 (SecretBox {libsodium} - comes along with most libsodium language binding)\
 b. XChaCha20Poly1305 (SecretBox {libsodium} - requires developer to do their own language binding)
 
-=======================================
-
-===Notice to developer who uses XChaCha20Poly1305(Single Diffie Hellman)===
+## Notice to developer who uses XChaCha20Poly1305(Single Diffie Hellman)
 
 Developer will need to know that server is Alice(Sender) and user/developer is known as Bob(Recipient).
 
@@ -125,9 +113,7 @@ Nonce = KDF(XChaCha20Poly1305's Nonce Length, 1, "GetNonce", ConcatedAliceBobPub
 5. Developer will need to calculate shared secret by using Bob's private key with Alice's public key.
 6. Developer can now decrypt the encrypted data with calculated sharedsecret with Nonce generated through KDF.
 
-=====================================================
-
-===Notice to developer who uses x3DH(End to End encryption)===
+## Notice to developer who uses x3DH(End to End encryption)
 
 1. Developer will need to take the 32 bytes public key from the encrypted data start from index 0-31 (Alice's Identity Key)
 2. Developer will need to take the 32 bytes public key from the encrypted data start from index 32-63 (Alice's Ephemeral Key)
@@ -169,5 +155,3 @@ ConcatedBobPKs = (BobSPKPK||BobIKPK||BobOPKPK)
 XChaCha20Poly1305 Nonce output length
 
 12. Developer can now decrypt data with MasterSharedSecret and the generated Nonce.
-
-=============================================
