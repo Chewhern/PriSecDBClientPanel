@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\chew\Desktop\HernITSoftware\C# WinForm\Software\PriSecDBClientPanel\|publish\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+    <_LastSelectedProfileId>C:\Users\chew\Desktop\HernITSoftware\C# WinForm\Net 5\Coding\PriSecDBClientPanel\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="CreateSealedCredentialsChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateSealedDBCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DBCRUDChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DBInsertDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DBLockUnlockChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DBUpdateDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DeleteDBRecordDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Greetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MakePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MakeRenewPaymentChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RenewPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SDHDBSelectDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SpecialDBUpdateDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SpecialDBInsertDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SX3DHDBSelectDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
