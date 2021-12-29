@@ -1,5 +1,0 @@
-Current Version: V0.0.1 - Prototype
-
-This is the prototype of PriSecDBClientPanel application, do expect bugs.
-
-Not to mention there'll be bugs in the server code.
