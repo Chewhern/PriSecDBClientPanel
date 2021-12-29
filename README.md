@@ -45,6 +45,9 @@ VPN will also block access to my stuffs(apply to China or any similar country ne
 ## Releases
 **Releases** represents the compiled and ready to use software, since version 0.0.1 is deprecated, you need to refer to this link on how you can install and run the application. (https://github.com/Chewhern/PriSec_General)
 
+## Important
+Since this application is still running in PayPal's sandbox environment, you need to refer to this link on how you can create a fake payment. (https://github.com/Chewhern/PriSec_General)
+
 ## Login Mechanism
 
 Passwords/Passphrases are consider as a user's secret. In general, if people choose to use passwords as a login mechanism, it's destined to be flawed as both user and developer might not know what they are doing. Passphrases on the other hand might not have such problems, however, it's not that doable to differentiate whether the given data is password or passphrases.
