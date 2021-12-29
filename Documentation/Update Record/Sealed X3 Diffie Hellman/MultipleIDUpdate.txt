@@ -1,5 +1,0 @@
-Same documentation as the link below:
-https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/Update%20Record/Sealed%20Diffie%20Hellman/MultipleIDUpdate.txt
-
-The API URL is not the same:
-1. https://mrchewitsoftware.com.my:5002/api/SpeicalSealedX3DHDBUpdate/ ("POST")

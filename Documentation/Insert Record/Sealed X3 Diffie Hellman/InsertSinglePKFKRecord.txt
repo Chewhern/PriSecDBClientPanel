@@ -1,5 +1,0 @@
-Same documentation as this link
-https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/Insert%20Record/Sealed%20Diffie%20Hellman/InsertSinglePKFKRecord.txt
-
-The API URL is not the same:
-1. https://mrchewitsoftware.com.my:5002/api/NormalSealedX3DHDBInsert/ ("POST")

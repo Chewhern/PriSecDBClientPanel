@@ -1,8 +1,0 @@
-DB Account Unlocking is a feature that will unlock your db account so that login
-at the server is possible.
-
-Same documentation as the link below:
-https://github.com/Chewhern/PriSecDBClientPanel/blob/main/Documentation/LockingDBAccount/Lock.txt
-
-The API URL is not the same on the 2nd URL:
-2. https://mrchewitsoftware.com.my:5002/api/UnlockDBAccount/ ("POST")
